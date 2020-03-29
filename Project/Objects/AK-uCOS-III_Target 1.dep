@@ -1,15 +1,0 @@
-Dependencies for Project 'AK-uCOS-III', Target 'Target 1': (DO NOT MODIFY !)
-F (..\App\app.c)(0x5E807C47)(--c99 --gnu -c --cpu Cortex-M3 --li -g -O0 --apcs=interwork --split_sections-I.\RTE\_Target_1-IF:\Keil5\Pack\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IF:\Keil5\Pack\ARM\CMSIS\5.5.1\Device\ARM\ARMCM3\Include-D__UVISION_VERSION="527" -D_RTE_ -DARMCM3-o .\objects\app.o --omf_browse .\objects\app.crf --depend .\objects\app.d)
-I (..\App\app.h)(0x5E807988)
-F (..\App\app_version.h)(0x5E807D0E)()
-F (..\Doc\readme.txt)(0x5E807972)()
-F (RTE\Device\ARMCM3\startup_ARMCM3.s)(0x5C8B5FFA)(--cpu Cortex-M3 --li -g --apcs=interwork -I.\RTE\_Target_1-IF:\Keil5\Pack\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IF:\Keil5\Pack\ARM\CMSIS\5.5.1\Device\ARM\ARMCM3\Include--pd "__UVISION_VERSION SETA 527" --pd "_RTE_ SETA 1" --pd "ARMCM3 SETA 1"--list .\listings\startup_armcm3.lst --xref -o .\objects\startup_armcm3.o --depend .\objects\startup_armcm3.d)
-F (RTE\Device\ARMCM3\system_ARMCM3.c)(0x5C8A247E)(--c99 --gnu -c --cpu Cortex-M3 --li -g -O0 --apcs=interwork --split_sections-I.\RTE\_Target_1-IF:\Keil5\Pack\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IF:\Keil5\Pack\ARM\CMSIS\5.5.1\Device\ARM\ARMCM3\Include-D__UVISION_VERSION="527" -D_RTE_ -DARMCM3-o .\objects\system_armcm3.o --omf_browse .\objects\system_armcm3.crf --depend .\objects\system_armcm3.d)
-I (F:\Keil5\Pack\ARM\CMSIS\5.5.1\Device\ARM\ARMCM3\Include\ARMCM3.h)(0x5BBD6B7A)
-I (F:\Keil5\Pack\ARM\CMSIS\5.5.1\CMSIS\Core\Include\core_cm3.h)(0x5C8F4DD4)
-I (F:\Keil5\Core\ARM\ARMCC\include\stdint.h)(0x599ECD2E)
-I (F:\Keil5\Pack\ARM\CMSIS\5.5.1\CMSIS\Core\Include\cmsis_version.h)(0x5B971444)
-I (F:\Keil5\Pack\ARM\CMSIS\5.5.1\CMSIS\Core\Include\cmsis_compiler.h)(0x5C8F4DD4)
-I (F:\Keil5\Pack\ARM\CMSIS\5.5.1\CMSIS\Core\Include\cmsis_armcc.h)(0x5C8F4DD4)
-I (F:\Keil5\Pack\ARM\CMSIS\5.5.1\CMSIS\Core\Include\mpu_armv7.h)(0x5C8F4DD4)
-I (F:\Keil5\Pack\ARM\CMSIS\5.5.1\Device\ARM\ARMCM3\Include\system_ARMCM3.h)(0x5BBD6B7A)
