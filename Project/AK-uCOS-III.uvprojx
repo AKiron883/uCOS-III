@@ -338,7 +338,7 @@
               <MiscControls></MiscControls>
               <Define></Define>
               <Undefine></Undefine>
-              <IncludePath></IncludePath>
+              <IncludePath>I:\uCOS-III;..\App;..\Doc;..\Project;..\User;..\User\uC-CPU;..\User\uC-LIB;..\User\uCOS-III;..\User\uCOS-III\Ports;..\User\uCOS-III\Source</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
