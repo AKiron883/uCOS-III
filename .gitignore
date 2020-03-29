@@ -1,3 +1,11 @@
+#keil5
+*.axf
+*.htm
+*.Wild_horse
+*.dep
+*.crf
+
+
 # Prerequisites
 *.d
 
@@ -6,6 +14,16 @@
 *.ko
 *.obj
 *.elf
+*.crf
+JLinkLog.txt
+JLinkSettings.ini
+*.axf
+/Project/OBJ/
+/Project/DebugConfig/
+*.uvguix.*
+*.uvoptx
+*.lst
+*.scvd
 
 # Linker output
 *.ilk
