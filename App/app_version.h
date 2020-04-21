@@ -3,6 +3,6 @@
 
 #define MAIN_VERSION      0
 #define CHILD_VERSION_A   0
-#define CHILD_VERSION_B   3
+#define CHILD_VERSION_B   4
 
 #endif

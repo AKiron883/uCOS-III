@@ -4,7 +4,8 @@
 *.Wild_horse
 *.dep
 *.crf
-
+*.sct
+*.lnp
 
 # Prerequisites
 *.d
