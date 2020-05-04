@@ -7,6 +7,7 @@
 #include "os_cpu.h"
 #include "os_cpu_c.h"
 #include "cpu.h"
+#include "os_time.h"
 
 #define 	TASK1_STK_SIZE	20
 #define 	TASK2_STK_SIZE	20
@@ -38,9 +39,9 @@ void Task1(void *p_arg)
 	for(;;)
 	{
 		flag1 = 1;
-		delay(100);
+		OSTimeDly(2);
 		flag1 = 0;
-		delay(100);
+		OSTimeDly(2);
 	}
 }
 
@@ -52,9 +53,9 @@ void Task2(void *p_arg)
 	for(;;)
 	{
 		flag2 = 1;
-		delay(100);
+		OSTimeDly(2);
 		flag2 = 0;
-		delay(100);
+		OSTimeDly(2);
 	}
 }
 
@@ -66,6 +67,9 @@ int main(void)
 	
 	OS_CPU_SysTickInit(10);		/**<配置SysTick 10ms 中断一次*/
 	
+	/*初始化相关的全局变量*/
+	OSInit(&err);
+
 	OSInit(&err);
 	
 	OSTaskCreate((OS_TCB*)		&Task1TCB,

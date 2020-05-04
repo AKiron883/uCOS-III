@@ -418,6 +418,11 @@
               <FilePath>..\User\uCOS-III\Source\os_time.c</FilePath>
             </File>
             <File>
+              <FileName>os_cfg_app.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\User\uCOS-III\Source\os_cfg_app.c</FilePath>
+            </File>
+            <File>
               <FileName>os.h</FileName>
               <FileType>5</FileType>
               <FilePath>..\User\uCOS-III\Source\os.h</FilePath>
@@ -426,6 +431,11 @@
               <FileName>os_cfg.h</FileName>
               <FileType>5</FileType>
               <FilePath>..\User\uCOS-III\Source\os_cfg.h</FilePath>
+            </File>
+            <File>
+              <FileName>os_type.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\User\uCOS-III\Source\os_type.h</FilePath>
             </File>
           </Files>
         </Group>

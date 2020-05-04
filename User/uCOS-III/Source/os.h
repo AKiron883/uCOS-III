@@ -3,6 +3,7 @@
 
 #include "cpu.h"
 #include "os_cfg.h"
+#include "os_type.h"
 
 #define OS_STATE_OS_STOPPED			(OS_STATE)(0u)
 #define OS_STATE_OS_RUNNING			(OS_STATE)(1u)
@@ -21,6 +22,7 @@ struct os_tcb
 {
 	CPU_STK				*StkPtr;			///< 任务栈的地址
 	CPU_STK_SIZE		StkSize;			///< 任务栈的大小
+	OS_TICK				TaskDelayTicks;		///< 任务延时周期个数
 };
 
 ///就绪任务列表数据类型
@@ -45,6 +47,14 @@ OS_EXT		OS_TCB			*OSTCBHighRdyPtr;
 OS_EXT		OS_RDY_LIST		OSRdyList[OS_CFG_PRIO_MAX];
 OS_EXT		OS_STATE		OSRunning;
 
+/*空闲任务*/
+extern CPU_STK* const OSCfg_IdleTaskStkBasePtr;
+extern CPU_STK_SIZE const OSCfg_IdleTaskStkSize;
+OS_EXT		OS_TCB			OSIdleTaskTCB;
+OS_EXT		OS_IDLE_CTR		OSIdleTaskCtr;
+
+
+
 
 ///错误类型
 typedef enum os_err
@@ -66,7 +76,7 @@ typedef enum os_err
 	OS_ERR_YIELD_ISR	=		34001u,
 	
 	OS_ERR_Z			=		35000u,
-
+	
 }OS_ERR;
 
 

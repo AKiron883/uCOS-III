@@ -9,5 +9,6 @@
 void OS_RdyListInit(void);
 void OSInit(OS_ERR *p_err);
 void OSStart(OS_ERR *p_err);
+void OS_IdleTaskInit(OS_ERR* p_err);
 
 #endif
