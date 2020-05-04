@@ -5,6 +5,8 @@
 #include "os_core.h"
 #include "os_task.h"
 #include "os_cpu.h"
+#include "os_cpu_c.h"
+#include "cpu.h"
 
 #define 	TASK1_STK_SIZE	20
 #define 	TASK2_STK_SIZE	20
@@ -28,16 +30,6 @@ void delay(uint32_t count)
 	{}
 }
 
-void OSSched(void)
-{
-	if(OSTCBCurPtr == OSRdyList[0].HeadPtr)
-		OSTCBHighRdyPtr = OSRdyList[1].HeadPtr;
-	else
-		OSTCBHighRdyPtr = OSRdyList[0].HeadPtr;
-	
-	OS_TASK_SW();
-}
-
 /**
  *@breif 任务1
  */
@@ -49,8 +41,6 @@ void Task1(void *p_arg)
 		delay(100);
 		flag1 = 0;
 		delay(100);
-		
-		OSSched();
 	}
 }
 
@@ -65,16 +55,16 @@ void Task2(void *p_arg)
 		delay(100);
 		flag2 = 0;
 		delay(100);
-		
-		OSSched();
 	}
 }
-
-
 
 int main(void)
 {
 	OS_ERR	err;
+	
+	CPU_IntDis();	/**<关闭中断*/
+	
+	OS_CPU_SysTickInit(10);		/**<配置SysTick 10ms 中断一次*/
 	
 	OSInit(&err);
 	
