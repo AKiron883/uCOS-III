@@ -1,5 +1,6 @@
 #include "os_core.h"
 #include "os.h"
+#include "os_cpu.h"
 
 void OSInit(OS_ERR *p_err)
 {
@@ -50,3 +51,4 @@ void OSStart(OS_ERR *p_err)
 
 
 }
+

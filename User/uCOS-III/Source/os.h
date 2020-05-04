@@ -34,7 +34,7 @@ typedef CPU_INT08U		OS_STATE;			///< 系统运行状态
 typedef CPU_INT08U		OS_PRIO;			///< 系统优先级	
 
 
-typedef void (OS_TASK_PTR)(void *p_arg);	///< 任务的实体函数指针
+typedef void (*OS_TASK_PTR)(void *p_arg);	///< 任务的实体函数指针
 
 
 

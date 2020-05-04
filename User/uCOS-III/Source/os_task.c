@@ -64,3 +64,4 @@ CPU_STK *OSTaskStkInit(OS_TASK_PTR	p_task,
 		
 	return (p_stk);
 }
+
