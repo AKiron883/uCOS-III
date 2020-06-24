@@ -8,6 +8,7 @@
 #include "os_cpu_c.h"
 #include "cpu.h"
 #include "os_time.h"
+#include "cpu_core.h"
 
 #define 	TASK1_STK_SIZE	20
 #define 	TASK2_STK_SIZE	20
@@ -25,6 +26,10 @@ void dealy(uint32_t count);
 uint32_t flag1;
 uint32_t flag2;
 
+uint32_t TimeStart;/*定义3个全局变量*/
+uint32_t TimeEnd;
+uint32_t TimeUse;
+
 void delay(uint32_t count)
 {
 	for(; count != 0; count--)
@@ -39,7 +44,10 @@ void Task1(void *p_arg)
 	for(;;)
 	{
 		flag1 = 1;
-		OSTimeDly(2);
+		TimeStart = OS_TS_GET();
+		OSTimeDly(20);
+		TimeEnd = OS_TS_GET();
+		TimeUse = TimeEnd - TimeStart;
 		flag1 = 0;
 		OSTimeDly(2);
 	}
@@ -62,6 +70,9 @@ void Task2(void *p_arg)
 int main(void)
 {
 	OS_ERR	err;
+	
+	/*CPU初始化,初始化时间戳*/
+	CPU_Init();
 	
 	CPU_IntDis();	/**<关闭中断*/
 	
